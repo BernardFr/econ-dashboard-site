@@ -1,0 +1,90 @@
+<!doctype html>
+<!--
+  One page per actor. Edit freely; publish.py fills in these placeholders:
+    actor_name, updated, nav, table, baseline_window, bold_threshold, indicator_descriptions, footer
+    The table's column-header tooltips come from column_help.toml.
+  A literal dollar sign must be written as two dollar signs.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consumer | Economic Indicators</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="tooltips.js" defer></script>
+</head>
+<body>
+  <nav><a href='index.html'>Home</a><a href='consumer.html' aria-current='page'>Consumer</a><a href='business.html'>Business</a><a href='country.html'>Country</a><a href='financial.html'>Financial sector</a><a href='housing.html'>Housing</a><a href='commodities.html'>Commodities</a><a href='ai.html'>AI Adoption Trends</a></nav>
+  <main>
+    <h1>Consumer</h1>
+    <p class="updated">Updated Oct 22, 2026 at 12:46 PDT</p>
+      <p>Each indicator compares its most recently available value to that of the baseline period, Oct 2023–Oct 2024. Values are computed monthly.<br/>
+      On a case by case basis, some indicators may have additional adjustments: e.g. 3-month averaging for highly variable series, or normalization by inflation.</p>
+    <p class="hint">Hover over or tap a dotted-underlined column header for its description.</p>
+
+    <table><thead><tr><th><button type='button' class='info' popovertarget='col-help-0' style='anchor-name: --col-help-0'>Indicator</button><div id='col-help-0' class='tip' popover role='tooltip' style='position-anchor: --col-help-0'>The economic series being tracked. Its definition and any adjustments are described below the table.</div></th><th><button type='button' class='info' popovertarget='col-help-1' style='anchor-name: --col-help-1'>Baseline Value</button><div id='col-help-1' class='tip' popover role='tooltip' style='position-anchor: --col-help-1'>The indicator's average over the baseline period, Oct 2023–Oct 2024, after any adjustments.</div></th><th><button type='button' class='info' popovertarget='col-help-2' style='anchor-name: --col-help-2'>Current Value</button><div id='col-help-2' class='tip' popover role='tooltip' style='position-anchor: --col-help-2'>The indicator's average over the most recent months, after the same adjustments. When a series has no data yet for those months, its latest available value is used.</div></th><th><button type='button' class='info' popovertarget='col-help-3' style='anchor-name: --col-help-3'>Data Unit</button><div id='col-help-3' class='tip' popover role='tooltip' style='position-anchor: --col-help-3'>The unit the series is published in by its source, for example billions of dollars or an index level.</div></th><th><button type='button' class='info' popovertarget='col-help-4' style='anchor-name: --col-help-4'>Delta</button><div id='col-help-4' class='tip' popover role='tooltip' style='position-anchor: --col-help-4'>How far the indicator has moved from the baseline value to the current value.<br><br>Shaded <span class="swatch improved">green</span> when the indicator moved in its good direction and <span class="swatch worsened">red</span> when it moved the other way; neutral indicators and unchanged values are not shaded.<br><br>Bold when larger than 10 (in either direction) and measured in % or % pts, to flag the biggest moves.</div></th><th><button type='button' class='info' popovertarget='col-help-5' style='anchor-name: --col-help-5'>Unit - Delta</button><div id='col-help-5' class='tip' popover role='tooltip' style='position-anchor: --col-help-5'>How the Delta is measured: <strong>%</strong> is a percent change, used for levels, prices and indexes; <strong>% pts</strong> (percentage points) is a simple difference, used for series that are already rates, such as an unemployment rate; <strong>&Delta;</strong> is a simple difference in the series' own units, used for index readings where a percent change would mislead.</div></th><th><button type='button' class='info' popovertarget='col-help-6' style='anchor-name: --col-help-6'>Improves when</button><div id='col-help-6' class='tip' popover role='tooltip' style='position-anchor: --col-help-6'>Which way is good news: <strong>rising</strong> means a rise is an improvement, <strong>falling</strong> means a fall is an improvement, and <strong>neutral</strong> means the move is shown but not judged.</div></th></tr></thead><tbody>
+<tr><td>30-Year Fixed Mortgage Rate</td><td class='num'>6.85</td><td class='num'>6.96</td><td>%</td><td class='num' style='background: #FFC7CE'>0.11</td><td>percentage points</td><td>falling</td></tr>
+<tr><td>Consumer credit outstanding</td><td class='num'>5,012,925.20</td><td class='num'>5,185,344.67</td><td>Billions of Dollars</td><td class='num'>3.44</td><td>%</td><td>neutral</td></tr>
+<tr><td>Consumer loan delinquency rate</td><td class='num'>2.70</td><td class='num'>2.62</td><td>%</td><td class='num' style='background: #C6EFCE'>-0.08</td><td>percentage points</td><td>falling</td></tr>
+<tr><td>Consumer sentiment - University of Michigan Survey</td><td class='num'>70.57</td><td class='num'>52.13</td><td>Index 1966:Q1=100</td><td class='num' style='background: #FFC7CE; font-weight: bold'>-26.13</td><td>%</td><td>rising</td></tr>
+<tr><td>Household debt service ratio</td><td class='num'>11.09</td><td class='num'>11.11</td><td>Percent</td><td class='num' style='background: #FFC7CE'>0.02</td><td>percentage points</td><td>falling</td></tr>
+<tr><td>Initial jobless claims (4-wk MA)</td><td class='num'>220,273.72</td><td class='num'>206,604.17</td><td>Persons</td><td class='num' style='background: #C6EFCE'>-6.21</td><td>%</td><td>falling</td></tr>
+<tr><td>Nonfarm payrolls</td><td class='num'>157,269.08</td><td class='num'>158,955.00</td><td>Thousands of Persons</td><td class='num' style='background: #C6EFCE'>1.07</td><td>%</td><td>rising</td></tr>
+<tr><td>Personal Consumption Expenditures: Chain-type Price Index</td><td class='num'>122.78</td><td class='num'>131.29</td><td>%</td><td class='num' style='background: #C6EFCE'>6.93</td><td>%</td><td>rising</td></tr>
+<tr><td>Personal saving rate</td><td class='num'>6.47</td><td class='num'>4.37</td><td>%</td><td class='num' style='background: #FFC7CE'>-2.11</td><td>percentage points</td><td>rising</td></tr>
+<tr><td>Net President approval rating: %Approve - %Disapprove</td><td class='num'>4.00</td><td class='num'>-21.33</td><td>%</td><td class='num' style='background: #FFC7CE; font-weight: bold'>-25.33</td><td>percentage points</td><td>rising</td></tr>
+<tr><td>Real average hourly earnings</td><td class='num'>37.48</td><td class='num'>37.91</td><td>Dollars per Hour</td><td class='num' style='background: #C6EFCE'>1.14</td><td>%</td><td>rising</td></tr>
+<tr><td>Real disposable income ex-transfers</td><td class='num'>16,461.40</td><td class='num'>17,043.73</td><td>Billions of Chained 2017 Dollars</td><td class='num' style='background: #C6EFCE'>3.54</td><td>%</td><td>rising</td></tr>
+<tr><td>Real personal consumption expenditures</td><td class='num'>15,875.50</td><td class='num'>16,890.60</td><td>Billions of Chained 2017 Dollars</td><td class='num' style='background: #C6EFCE'>6.39</td><td>%</td><td>rising</td></tr>
+<tr><td>Real retail &amp; food services sales</td><td class='num'>221,743.85</td><td class='num'>230,811.33</td><td>Millions of 1982-84 CPI Adjusted Dollars</td><td class='num' style='background: #C6EFCE'>4.09</td><td>%</td><td>rising</td></tr>
+<tr><td>Regular gasoline price</td><td class='num'>3.36</td><td class='num'>4.26</td><td>Dollars per Gallon</td><td class='num' style='background: #FFC7CE; font-weight: bold'>26.68</td><td>%</td><td>falling</td></tr>
+<tr><td>Revolving Consumer Credit Owned and Securitized</td><td class='num'>1,316,612.85</td><td class='num'>1,354,677.80</td><td>Billions of Dollars</td><td class='num'>2.89</td><td>%</td><td>neutral</td></tr>
+<tr><td>S&amp;P 500 (wealth effect)</td><td class='num'>5,122.63</td><td class='num'>7,718.52</td><td>Index</td><td class='num' style='background: #C6EFCE; font-weight: bold'>50.67</td><td>%</td><td>rising</td></tr>
+<tr><td>Unemployment rate</td><td class='num'>3.92</td><td class='num'>4.13</td><td>%</td><td class='num' style='background: #FFC7CE'>0.21</td><td>percentage points</td><td>falling</td></tr>
+</tbody></table>
+
+    <section class="indicator-notes">
+      <h2>What each indicator means</h2>
+      <ul>
+<li><strong>30-Year Fixed Mortgage Rate</strong>: Key indicator of long-term borrowing costs for consumers and for housing markets.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/MORTGAGE30US'>[1]</a></span></li>
+<li><strong>Consumer credit outstanding</strong>: Neutral by design: credit growth is demand when incomes rise and distress when they do not.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/TOTALSL'>[2]</a></span></li>
+<li><strong>Consumer loan delinquency rate</strong><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/DRCLACBS'>[3]</a></span></li>
+<li><strong>Consumer sentiment - University of Michigan Survey</strong><br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/UMCSENT'>[4]</a></span></li>
+<li><strong>Household debt service ratio</strong>: Better stress read than credit levels; normalizes debt to income.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/TDSP'>[5]</a></span></li>
+<li><strong>Initial jobless claims (4-wk MA)</strong><br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/IC4WSA'>[6]</a></span></li>
+<li><strong>Nonfarm payrolls</strong><br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/PAYEMS'>[7]</a></span></li>
+<li><strong>Personal Consumption Expenditures: Chain-type Price Index</strong>: Captures inflation (or deflation) across a wide range of consumer expenses and reflecting changes in consumer behavior<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/PCEPI'>[8]</a></span></li>
+<li><strong>Personal saving rate</strong>: Shock absorber. Spending held up by falling savings is a weak signal.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/PSAVERT'>[9]</a></span></li>
+<li><strong>Net President approval rating: %Approve - %Disapprove</strong>: President&#x27;s net approval rating compiled by YouGov, calculated as the difference between approval and disapproval percentages. Average of the weekly surveys.<br><span class='citations'>Reference: <a href='https://yougov.com/en-us/trackers/donald-trump-approval'>[10]</a></span></li>
+<li><strong>Real average hourly earnings</strong><br><span class='transforms'>Adjusted for inflation with price index CPIAUCSL, in today&#x27;s prices.</span><br><span class='citations'>References: <a href='https://fred.stlouisfed.org/series/CES0500000003'>[11]</a>, <a href='https://fred.stlouisfed.org/series/CPIAUCSL'>[12]</a></span></li>
+<li><strong>Real disposable income ex-transfers</strong>: The income series the NBER watches; strips fiscal transfer noise.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/W875RX1'>[13]</a></span></li>
+<li><strong>Real personal consumption expenditures</strong><br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/PCEC96'>[14]</a></span></li>
+<li><strong>Real retail &amp; food services sales</strong><br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/RRSFS'>[15]</a></span></li>
+<li><strong>Regular gasoline price</strong><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/GASREGW'>[16]</a></span></li>
+<li><strong>Revolving Consumer Credit Owned and Securitized</strong>: Neutral by design: credit growth is demand when incomes rise and distress when they do not.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/REVOLSL'>[17]</a></span></li>
+<li><strong>S&amp;P 500 (wealth effect)</strong>: FRED retains only 10 years of daily history. WILL5000INDFC goes back further and is a broader wealth proxy.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/SP500'>[18]</a></span></li>
+<li><strong>Unemployment rate</strong><br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/UNRATE'>[19]</a></span></li>
+</ul>
+    </section>
+  </main>
+  <!-- Shared footer, inserted into every page. Placeholder: year -->
+<footer>
+  <p>
+    A personal, non-commercial project. &copy; 2026 Bernard Fraenkel.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>:
+    you may share and adapt this site's content with attribution, for non-commercial purposes only,
+    and adaptations must use the same license. Any business or commercial use requires written permission.
+    The license covers this site's own content (analysis, descriptions and presentation), not the underlying data.
+  </p>
+  <p>
+    Source data remain the property of their respective owners:
+    Federal Reserve Bank of St. Louis (FRED&reg;), U.S. Bureau of Labor Statistics,
+    U.S. Department of the Treasury (Fiscal Data), Yahoo Finance, YouGov and Ramp.
+    FRED&reg; is a registered trademark of the Federal Reserve Bank of St. Louis.
+    Third-party series are subject to their owners' copyrights and terms of use.
+  </p>
+  <p>For information only. This is not investment, financial or legal advice.</p>
+</footer>
+
+</body>
+</html>

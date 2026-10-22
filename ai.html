@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+  One page per actor. Edit freely; publish.py fills in these placeholders:
+    actor_name, updated, nav, table, baseline_window, bold_threshold, indicator_descriptions, footer
+    The table's column-header tooltips come from column_help.toml.
+  A literal dollar sign must be written as two dollar signs.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Adoption Trends | Economic Indicators</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="tooltips.js" defer></script>
+</head>
+<body>
+  <nav><a href='index.html'>Home</a><a href='consumer.html'>Consumer</a><a href='business.html'>Business</a><a href='country.html'>Country</a><a href='financial.html'>Financial sector</a><a href='housing.html'>Housing</a><a href='commodities.html'>Commodities</a><a href='ai.html' aria-current='page'>AI Adoption Trends</a></nav>
+  <main>
+    <h1>AI Adoption Trends</h1>
+    <p class="updated">Updated Oct 22, 2026 at 12:46 PDT</p>
+      <p>Each indicator compares its most recently available value to that of the baseline period, Oct 2023–Oct 2024. Values are computed monthly.<br/>
+      On a case by case basis, some indicators may have additional adjustments: e.g. 3-month averaging for highly variable series, or normalization by inflation.</p>
+    <p class="hint">Hover over or tap a dotted-underlined column header for its description.</p>
+
+    <table><thead><tr><th><button type='button' class='info' popovertarget='col-help-0' style='anchor-name: --col-help-0'>Indicator</button><div id='col-help-0' class='tip' popover role='tooltip' style='position-anchor: --col-help-0'>The economic series being tracked. Its definition and any adjustments are described below the table.</div></th><th><button type='button' class='info' popovertarget='col-help-1' style='anchor-name: --col-help-1'>Baseline Value</button><div id='col-help-1' class='tip' popover role='tooltip' style='position-anchor: --col-help-1'>The indicator's average over the baseline period, Oct 2023–Oct 2024, after any adjustments.</div></th><th><button type='button' class='info' popovertarget='col-help-2' style='anchor-name: --col-help-2'>Current Value</button><div id='col-help-2' class='tip' popover role='tooltip' style='position-anchor: --col-help-2'>The indicator's average over the most recent months, after the same adjustments. When a series has no data yet for those months, its latest available value is used.</div></th><th><button type='button' class='info' popovertarget='col-help-3' style='anchor-name: --col-help-3'>Data Unit</button><div id='col-help-3' class='tip' popover role='tooltip' style='position-anchor: --col-help-3'>The unit the series is published in by its source, for example billions of dollars or an index level.</div></th><th><button type='button' class='info' popovertarget='col-help-4' style='anchor-name: --col-help-4'>Delta</button><div id='col-help-4' class='tip' popover role='tooltip' style='position-anchor: --col-help-4'>How far the indicator has moved from the baseline value to the current value.<br><br>Shaded <span class="swatch improved">green</span> when the indicator moved in its good direction and <span class="swatch worsened">red</span> when it moved the other way; neutral indicators and unchanged values are not shaded.<br><br>Bold when larger than 10 (in either direction) and measured in % or % pts, to flag the biggest moves.</div></th><th><button type='button' class='info' popovertarget='col-help-5' style='anchor-name: --col-help-5'>Unit - Delta</button><div id='col-help-5' class='tip' popover role='tooltip' style='position-anchor: --col-help-5'>How the Delta is measured: <strong>%</strong> is a percent change, used for levels, prices and indexes; <strong>% pts</strong> (percentage points) is a simple difference, used for series that are already rates, such as an unemployment rate; <strong>&Delta;</strong> is a simple difference in the series' own units, used for index readings where a percent change would mislead.</div></th><th><button type='button' class='info' popovertarget='col-help-6' style='anchor-name: --col-help-6'>Improves when</button><div id='col-help-6' class='tip' popover role='tooltip' style='position-anchor: --col-help-6'>Which way is good news: <strong>rising</strong> means a rise is an improvement, <strong>falling</strong> means a fall is an improvement, and <strong>neutral</strong> means the move is shown but not judged.</div></th></tr></thead><tbody>
+<tr><td>AI Chipmakers Stock Index</td><td class='num'>0.74</td><td class='num'>5.72</td><td>USD</td><td class='num' style='background: #C6EFCE; font-weight: bold'>669.74</td><td>%</td><td>rising</td></tr>
+<tr><td>Businesses paying for AI tools (Ramp AI Index)</td><td class='num'>30.82</td><td class='num'>55.55</td><td>Percent of businesses</td><td class='num' style='background: #C6EFCE; font-weight: bold'>24.73</td><td>percentage points</td><td>rising</td></tr>
+<tr><td>Businesses using AI in the past month (Census BTOS)</td><td class='num'>4.95</td><td class='num'>22.95</td><td>Percent of businesses</td><td class='num' style='background: #C6EFCE; font-weight: bold'>18.01</td><td>percentage points</td><td>rising</td></tr>
+<tr><td>CPI, electricity</td><td class='num'>4.14</td><td class='num'>4.08</td><td>Index 1982-1984=100</td><td class='num' style='background: #C6EFCE'>-0.06</td><td>percentage points</td><td>falling</td></tr>
+<tr><td>Construction job postings (Indeed)</td><td class='num'>136.76</td><td class='num'>125.83</td><td>Index Feb, 1 2020=100</td><td class='num' style='background: #FFC7CE'>-7.99</td><td>%</td><td>rising</td></tr>
+<tr><td>Construction spending: power</td><td class='num'>186,826.89</td><td class='num'>185,429.28</td><td>Millions of Dollars, Seasonally Adjusted Annual Rate</td><td class='num' style='background: #FFC7CE'>-0.75</td><td>%</td><td>rising</td></tr>
+<tr><td>Electrical engineering job postings (Indeed)</td><td class='num'>137.09</td><td class='num'>146.30</td><td>Index Feb, 1 2020=100</td><td class='num' style='background: #C6EFCE'>6.71</td><td>%</td><td>rising</td></tr>
+<tr><td>Employment: computing infrastructure, data processing and hosting</td><td class='num'>482.79</td><td class='num'>457.80</td><td>Thousands of Persons</td><td class='num' style='background: #FFC7CE'>-5.18</td><td>%</td><td>rising</td></tr>
+<tr><td>Employment: electrical contractors</td><td class='num'>1,088.08</td><td class='num'>1,156.13</td><td>Thousands of Persons</td><td class='num' style='background: #C6EFCE'>6.25</td><td>%</td><td>rising</td></tr>
+<tr><td>Generative AI adoption outside work, adults 18-64</td><td class='num'>37.66</td><td class='num'>54.81</td><td>Percent</td><td class='num' style='background: #C6EFCE; font-weight: bold'>17.15</td><td>percentage points</td><td>rising</td></tr>
+<tr><td>Hyperscaler Stock Index</td><td class='num'>0.89</td><td class='num'>1.47</td><td>USD</td><td class='num' style='background: #C6EFCE; font-weight: bold'>66.42</td><td>%</td><td>rising</td></tr>
+<tr><td>Industrial production: semiconductors</td><td class='num'>141.15</td><td class='num'>193.39</td><td>Index 2017=100</td><td class='num' style='background: #C6EFCE; font-weight: bold'>37.01</td><td>%</td><td>rising</td></tr>
+<tr><td>NVIDIA share price</td><td class='num'>88.40</td><td class='num'>222.97</td><td>U.S. Dollars</td><td class='num' style='background: #C6EFCE; font-weight: bold'>152.23</td><td>%</td><td>rising</td></tr>
+<tr><td>PHLX Semiconductor Index (SOX)</td><td class='num'>4,632.10</td><td class='num'>12,083.11</td><td>Index</td><td class='num' style='background: #C6EFCE; font-weight: bold'>160.86</td><td>%</td><td>rising</td></tr>
+<tr><td>Real average hourly earnings: electrical contractors</td><td class='num'>41.79</td><td class='num'>43.61</td><td>Dollars per Hour</td><td class='num' style='background: #C6EFCE'>4.36</td><td>%</td><td>rising</td></tr>
+</tbody></table>
+
+    <section class="indicator-notes">
+      <h2>What each indicator means</h2>
+      <ul>
+<li><strong>AI Chipmakers Stock Index</strong>: Chipmakers stock index composed of major chipmaking companies like TSMC. Daily stock prices in USD.<br><span class='transforms'>Averaged with 000660.KS, MU into an equal-weighted index; each stock is scaled to its peak price in the baseline window.</span><br><span class='citations'>References: <a href='https://finance.yahoo.com/quote/2330.TW'>[1]</a>, <a href='https://finance.yahoo.com/quote/000660.KS'>[2]</a>, <a href='https://finance.yahoo.com/quote/MU'>[3]</a></span></li>
+<li><strong>Businesses paying for AI tools (Ramp AI Index)</strong>: Card and bill-pay data from Ramp customers, which skew tech-forward and VC-backed. Paid adoption only; reads well above Census by construction.<br><span class='citations'>Reference: <a href='https://ramp.com/data/ai-index'>[4]</a></span></li>
+<li><strong>Businesses using AI in the past month (Census BTOS)</strong>: This is a survey-based measure from the Census BTOS.<br><span class='citations'>Reference: <a href='https://ramp.com/data/ai-index'>[5]</a></span></li>
+<li><strong>CPI, electricity</strong>: Household cost side of the data center build.<br><span class='transforms'>Converted to the 12-month percent change.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/CUSR0000SEHF01'>[6]</a></span></li>
+<li><strong>Construction job postings (Indeed)</strong>: Closest proxy for electrician openings: no occupation-level openings series exists. Indeed requires permission for republication.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/IHLIDXUSTPCONS'>[7]</a></span></li>
+<li><strong>Construction spending: power</strong>: Generation and grid build, the other physical bottleneck alongside data centers.<br><span class='transforms'>Adjusted for inflation with price index PPIACO, in today&#x27;s prices; then smoothed with a trailing 3-month average.</span><br><span class='citations'>References: <a href='https://fred.stlouisfed.org/series/TLPWRCONS'>[8]</a>, <a href='https://fred.stlouisfed.org/series/PPIACO'>[9]</a></span></li>
+<li><strong>Electrical engineering job postings (Indeed)</strong>: Indeed requires permission for republication.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/IHLIDXUSTPELECENGI'>[10]</a></span></li>
+<li><strong>Employment: computing infrastructure, data processing and hosting</strong>: NAICS 518.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/CES5051800001'>[11]</a></span></li>
+<li><strong>Employment: electrical contractors</strong>: Likely a better tightness signal than wages, which adjust slowly. From the BLS API: FRED does not carry NAICS 238210 detail.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://data.bls.gov/timeseries/CES2023821001'>[12]</a></span></li>
+<li><strong>Generative AI adoption outside work, adults 18-64</strong>: Real-Time Population Survey GenAI Adoption Tracker. History from Aug 2024.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/RPSGENAIUSAGESHARENONWORK'>[13]</a></span></li>
+<li><strong>Hyperscaler Stock Index</strong>: Hyperscaler stock index composed of major tech companies like Google. Daily stock prices in USD.<br><span class='transforms'>Averaged with AMZN, MSFT into an equal-weighted index; each stock is scaled to its peak price in the baseline window.</span><br><span class='citations'>References: <a href='https://finance.yahoo.com/quote/GOOG'>[14]</a>, <a href='https://finance.yahoo.com/quote/AMZN'>[15]</a>, <a href='https://finance.yahoo.com/quote/MSFT'>[16]</a></span></li>
+<li><strong>Industrial production: semiconductors</strong>: U.S. output of semiconductors and related devices.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/IPG3344S'>[17]</a></span></li>
+<li><strong>NVIDIA share price</strong>: Sentiment gauge for a single company; read alongside ai_sox_index.<br><span class='citations'>Reference: <a href='https://finance.yahoo.com/quote/NVDA'>[18]</a></span></li>
+<li><strong>PHLX Semiconductor Index (SOX)</strong>: Market expectations for AI hardware, not activity. Broader than NVDA alone.<br><span class='citations'>Reference: <a href='https://finance.yahoo.com/quote/%5ESOX'>[19]</a></span></li>
+<li><strong>Real average hourly earnings: electrical contractors</strong>: Industry (NAICS 23821), not occupation: occupational wages (OEWS) are annual. From the BLS API: FRED does not carry NAICS 238210 detail.<br><span class='transforms'>Adjusted for inflation with price index CPIAUCSL, in today&#x27;s prices.</span><br><span class='citations'>References: <a href='https://data.bls.gov/timeseries/CES2023821003'>[20]</a>, <a href='https://fred.stlouisfed.org/series/CPIAUCSL'>[21]</a></span></li>
+</ul>
+    </section>
+  </main>
+  <!-- Shared footer, inserted into every page. Placeholder: year -->
+<footer>
+  <p>
+    A personal, non-commercial project. &copy; 2026 Bernard Fraenkel.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>:
+    you may share and adapt this site's content with attribution, for non-commercial purposes only,
+    and adaptations must use the same license. Any business or commercial use requires written permission.
+    The license covers this site's own content (analysis, descriptions and presentation), not the underlying data.
+  </p>
+  <p>
+    Source data remain the property of their respective owners:
+    Federal Reserve Bank of St. Louis (FRED&reg;), U.S. Bureau of Labor Statistics,
+    U.S. Department of the Treasury (Fiscal Data), Yahoo Finance, YouGov and Ramp.
+    FRED&reg; is a registered trademark of the Federal Reserve Bank of St. Louis.
+    Third-party series are subject to their owners' copyrights and terms of use.
+  </p>
+  <p>For information only. This is not investment, financial or legal advice.</p>
+</footer>
+
+</body>
+</html>
