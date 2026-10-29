@@ -1,0 +1,102 @@
+<!doctype html>
+<!--
+  One page per actor. Edit freely; publish.py fills in these placeholders:
+    actor_name, updated, nav, summary, table, content_blocks, baseline_window, bold_threshold, indicator_descriptions, footer
+    The table's column-header tooltips come from column_help.toml.
+  A literal dollar sign must be written as two dollar signs.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business | Economic Indicators</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="tooltips.js" defer></script>
+</head>
+<body>
+  <nav><a href='index.html'>Home</a><a href='consumer.html'>Consumer</a><a href='business.html' aria-current='page'>Business</a><a href='country.html'>Country</a><a href='financial.html'>Financial sector</a><a href='housing.html'>Housing</a><a href='commodities.html'>Commodities</a><a href='ai.html'>AI Adoption Trends</a><a href='history.html'>History</a></nav>
+  <main>
+    <h1>Business</h1>
+    <p class="updated">Updated Oct 28, 2026 at 19:57 PDT</p>
+      <p>Each indicator compares its most recently available value to that of the baseline period, Oct 2023–Oct 2024. Values are computed monthly.<br/>
+      On a case by case basis, some indicators may have additional adjustments: e.g. 3-month averaging for highly variable series, or normalization by inflation.</p>
+    <section class="summary">
+      <h2>Summary</h2>
+      <ul><li>Improving: 6</li><li>Worsening: 10</li><li>Neutral: 2</li></ul>
+    </section>
+
+    <p class="hint">Hover over or tap a dotted-underlined column header for its description.</p>
+
+    <table><thead><tr><th><button type='button' class='info' popovertarget='col-help-0' style='anchor-name: --col-help-0'>Indicator</button><div id='col-help-0' class='tip' popover role='tooltip' style='position-anchor: --col-help-0'>The economic series being tracked. Its definition and any adjustments are described below the table.</div></th><th><button type='button' class='info' popovertarget='col-help-1' style='anchor-name: --col-help-1'>Baseline Value</button><div id='col-help-1' class='tip' popover role='tooltip' style='position-anchor: --col-help-1'>The indicator's average over the baseline period, Oct 2023–Oct 2024, after any adjustments.</div></th><th><button type='button' class='info' popovertarget='col-help-2' style='anchor-name: --col-help-2'>Current Value</button><div id='col-help-2' class='tip' popover role='tooltip' style='position-anchor: --col-help-2'>The indicator's average over the most recent months, after the same adjustments. When a series has no data yet for those months, its latest available value is used.</div></th><th><button type='button' class='info' popovertarget='col-help-3' style='anchor-name: --col-help-3'>Data Unit</button><div id='col-help-3' class='tip' popover role='tooltip' style='position-anchor: --col-help-3'>The unit the series is published in by its source, for example billions of dollars or an index level.</div></th><th><button type='button' class='info' popovertarget='col-help-4' style='anchor-name: --col-help-4'>Delta</button><div id='col-help-4' class='tip' popover role='tooltip' style='position-anchor: --col-help-4'>How far the indicator has moved from the baseline value to the current value.<br><br>Shaded <span class="swatch improved">green</span> when the indicator moved in its good direction and <span class="swatch worsened">red</span> when it moved the other way; neutral indicators and unchanged values are not shaded.<br><br>Bold when larger than 10 (in either direction) and measured in % or % pts, to flag the biggest moves.</div></th><th><button type='button' class='info' popovertarget='col-help-5' style='anchor-name: --col-help-5'>Unit - Delta</button><div id='col-help-5' class='tip' popover role='tooltip' style='position-anchor: --col-help-5'>How the Delta is measured: <strong>%</strong> is a percent change, used for levels, prices and indexes; <strong>% pts</strong> (percentage points) is a simple difference, used for series that are already rates, such as an unemployment rate; <strong>&Delta;</strong> is a simple difference in the series' own units, used for index readings where a percent change would mislead.</div></th><th><button type='button' class='info' popovertarget='col-help-6' style='anchor-name: --col-help-6'>Improves when</button><div id='col-help-6' class='tip' popover role='tooltip' style='position-anchor: --col-help-6'>Which way is good news: <strong>rising</strong> means a rise is an improvement, <strong>falling</strong> means a fall is an improvement, and <strong>neutral</strong> means the move is shown but not judged.</div></th></tr></thead><tbody>
+<tr><td>Core capital goods new orders</td><td class='num'>83,556.32</td><td class='num'>87,640.00</td><td>Millions of Dollars</td><td class='num' style='background: #C6EFCE'>4.89</td><td>%</td><td>rising</td></tr>
+<tr><td>Manufacturing new orders, total</td><td class='num'>665,759.55</td><td class='num'>663,491.00</td><td>Millions of Dollars</td><td class='num' style='background: #FFC7CE'>-0.34</td><td>%</td><td>rising</td></tr>
+<tr><td>Inventories-to-sales ratio</td><td class='num'>1.44</td><td class='num'>1.33</td><td>ratio</td><td class='num' style='background: #C6EFCE'>-0.10</td><td>% pts</td><td>falling</td></tr>
+<tr><td>Industrial production</td><td class='num'>100.38</td><td class='num'>103.31</td><td>Index - Index 2017=100</td><td class='num' style='background: #C6EFCE'>2.91</td><td>%</td><td>rising</td></tr>
+<tr><td>Capacity utilization</td><td class='num'>76.52</td><td class='num'>76.48</td><td>%</td><td class='num' style='background: #FFC7CE'>-0.04</td><td>% pts</td><td>rising</td></tr>
+<tr><td>Employment Cost Index: Wages &amp; Salaries</td><td class='num'>167.52</td><td class='num'>179.01</td><td>index - Dec 2005=100</td><td class='num' style='background: #FFC7CE'>6.86</td><td>%</td><td>falling</td></tr>
+<tr><td>Job openings rate (Nonfarm)</td><td class='num'>4.89</td><td class='num'>4.33</td><td>rate</td><td class='num' style='background: #C6EFCE'>-0.56</td><td>% pts</td><td>falling</td></tr>
+<tr><td>Layoffs &amp; discharges: Total Nonfarm</td><td class='num'>1.04</td><td class='num'>1.07</td><td>rate</td><td class='num' style='background: #FFC7CE'>0.03</td><td>% pts</td><td>falling</td></tr>
+<tr><td>Business applications (EINs)</td><td class='num'>442,973.79</td><td class='num'>547,505.00</td><td>count</td><td class='num' style='background: #C6EFCE; font-weight: bold'>23.60</td><td>%</td><td>rising</td></tr>
+<tr><td>Diesel price</td><td class='num'>3.91</td><td class='num'>5.99</td><td>USD per gallon</td><td class='num' style='background: #FFC7CE; font-weight: bold'>53.14</td><td>%</td><td>falling</td></tr>
+<tr><td>WTI crude oil</td><td class='num'>79.16</td><td class='num'>85.14</td><td>USD per barrel</td><td class='num' style='background: #FFC7CE'>7.55</td><td>%</td><td>falling</td></tr>
+<tr><td>Global price of Copper</td><td class='num'>8,855.11</td><td class='num'>13,962.21</td><td>U.S. Dollars per Metric Ton</td><td class='num' style='background: #C6EFCE; font-weight: bold'>57.67</td><td>%</td><td>rising</td></tr>
+<tr><td>PPI unprocessed goods for intermediate demand</td><td class='num'>-8.54</td><td class='num'>12.19</td><td>Index 1982=100, seasonally adjusted</td><td class='num' style='background: #FFC7CE; font-weight: bold'>20.72</td><td>% pts</td><td>falling</td></tr>
+<tr><td>PPI processed goods for intermediate demand</td><td class='num'>-2.11</td><td class='num'>11.41</td><td>Index 1982=100, seasonally adjusted</td><td class='num' style='background: #FFC7CE; font-weight: bold'>13.53</td><td>% pts</td><td>falling</td></tr>
+<tr><td>PPI final demand</td><td class='num'>1.85</td><td class='num'>5.48</td><td>Index Nov 2009=100, seasonally adjusted</td><td class='num' style='background: #FFC7CE'>3.63</td><td>% pts</td><td>falling</td></tr>
+<tr><td>10-Year Treasury Yield Averaged Daily</td><td class='num'>4.24</td><td class='num'>4.83</td><td>Percent</td><td class='num' style='background: #FFC7CE'>0.60</td><td>% pts</td><td>falling</td></tr>
+<tr><td>Commercial &amp; industrial loans</td><td class='num'>2,761.54</td><td class='num'>2,916.97</td><td>USD Billions, Seasonally Adjusted</td><td class='num'>5.63</td><td>%</td><td>neutral</td></tr>
+<tr><td>Nonfinancial corporate debt</td><td class='num'>14,397,511.80</td><td class='num'>15,698,562.00</td><td>USD Millions, Seasonally Adjusted Annual Rate</td><td class='num'>9.04</td><td>%</td><td>neutral</td></tr>
+</tbody></table>
+
+    <section class='content-block'><h2>Produce Price Index</h2><figure class='chart'><img src='business/ppi_chain.svg' alt='Producer prices, upstream to final demand'></figure><div class='commentary'><!-- Your commentary here, in Markdown. This line does not appear on the page. -->
+
+<p>The 3 measures of Producer Price Index illustrate how businesses have had to compress their margins. Costs for raw (unprocessed) and intermediate (processed) goods have risen by double digit figures, while prices final goods (sold to their businesss or consumer customers)  have risen by only 5.6%.</p></div></section>
+
+    <section class="indicator-notes">
+      <h2>What each indicator means</h2>
+      <ul>
+<li><strong>Core capital goods new orders</strong>: Manufacturers&#x27; New Orders: Nondefense Capital Goods Excluding Aircraft<br><span class='transforms'>Adjusted for inflation with price index PPIACO, in today&#x27;s prices.</span><br><span class='citations'>References: <a href='https://fred.stlouisfed.org/series/NEWORDER'>[1]</a>, <a href='https://fred.stlouisfed.org/series/PPIACO'>[2]</a></span></li>
+<li><strong>Manufacturing new orders, total</strong>: Manufacturers&#x27; New Orders: Total Manufacturing <br><span class='transforms'>Adjusted for inflation with price index PPIACO, in today&#x27;s prices.</span><br><span class='citations'>References: <a href='https://fred.stlouisfed.org/series/AMTMNO'>[3]</a>, <a href='https://fred.stlouisfed.org/series/PPIACO'>[2]</a></span></li>
+<li><strong>Inventories-to-sales ratio</strong>: Best early recession tell here: inventories rising into flat sales precedes production cuts.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/ISRATIO'>[4]</a></span></li>
+<li><strong>Industrial production</strong>: Measures the real output of all relevant establishments located in the United States, regardless of their ownership<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/INDPRO'>[5]</a></span></li>
+<li><strong>Capacity utilization</strong>: Covers manufacturing, mining, and electric and gas utilities<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/TCU'>[6]</a></span></li>
+<li><strong>Employment Cost Index: Wages &amp; Salaries</strong>: Employment Cost Index: Wages and Salaries: Private Industry Workers<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/ECIWAG'>[7]</a></span></li>
+<li><strong>Job openings rate (Nonfarm)</strong>: Job Openings: Total Nonfarm<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/JTSJOR'>[8]</a></span></li>
+<li><strong>Layoffs &amp; discharges: Total Nonfarm</strong>: Layoffs &amp; discharges: Total Nonfarm<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/JTSLDR'>[9]</a></span></li>
+<li><strong>Business applications (EINs)</strong>: Business Applications: Total for All North American Industries in the United States<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/BABATOTALSAUS'>[10]</a></span></li>
+<li><strong>Diesel price</strong>: Impacts businesses: freight, agriculture and construction rather than consumers.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/GASDESW'>[11]</a></span></li>
+<li><strong>WTI crude oil</strong>: West Texas Intermediate crude oil spot price.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/MCOILWTICO'>[12]</a></span></li>
+<li><strong>Global price of Copper</strong>: The best single commodity signal of global industrial demand<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/PCOPPUSDM'>[13]</a></span></li>
+<li><strong>PPI unprocessed goods for intermediate demand</strong>: Most upstream rung. Noisiest series in this bucket -- BLS one-month changes run to +/-6 to 14% (Apr 2020: -14.3%), since unprocessed commodities have no fabrication stage to damp them. Hence the smoothing.<br><span class='transforms'>Converted to the 12-month percent change; then smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/WPSID62'>[14]</a></span></li>
+<li><strong>PPI processed goods for intermediate demand</strong>: Midstream rung, and the input leg of the margin spread. Fabricated inputs outrunning output prices means firms are absorbing cost, which lands in earnings a quarter or two later.<br><span class='transforms'>Converted to the 12-month percent change; then smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/WPSID61'>[15]</a></span></li>
+<li><strong>PPI final demand</strong>: Headline business inflation. Prices received by domestic producers -- seller&#x27;s perspective, excludes imports, no sales tax.<br><span class='transforms'>Converted to the 12-month percent change; then smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/PPIFIS'>[16]</a></span></li>
+<li><strong>10-Year Treasury Yield Averaged Daily</strong>: Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis <br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/GS10'>[17]</a></span></li>
+<li><strong>Commercial &amp; industrial loans</strong>: Commercial &amp; industrial loans, all commercial banks.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/BUSLOANS'>[18]</a></span></li>
+<li><strong>Nonfinancial corporate debt</strong>: Nonfinancial corporate debt<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/BCNSDODNS'>[19]</a></span></li>
+</ul>
+    </section>
+  </main>
+  <!-- Shared footer, inserted into every page. Placeholder: year -->
+<footer>
+  <p>
+    A personal, non-commercial project. &copy; 2026 Bernard Fraenkel.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>:
+    you may share and adapt this site's content with attribution, for non-commercial purposes only,
+    and adaptations must use the same license. Any business or commercial use requires written permission.
+    The license covers this site's own content (analysis, descriptions and presentation), not the underlying data.
+  </p>
+  <p>
+    Source data remain the property of their respective owners:
+    Federal Reserve Bank of St. Louis (FRED&reg;), U.S. Bureau of Labor Statistics,
+    U.S. Department of the Treasury (Fiscal Data), Yahoo Finance, YouGov and Ramp.
+    FRED&reg; is a registered trademark of the Federal Reserve Bank of St. Louis.
+    Third-party series are subject to their owners' copyrights and terms of use.
+  </p>
+  <p>For information only. This is not investment, financial or legal advice.</p>
+</footer>
+
+</body>
+</html>

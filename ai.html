@@ -1,0 +1,99 @@
+<!doctype html>
+<!--
+  One page per actor. Edit freely; publish.py fills in these placeholders:
+    actor_name, updated, nav, summary, table, content_blocks, baseline_window, bold_threshold, indicator_descriptions, footer
+    The table's column-header tooltips come from column_help.toml.
+  A literal dollar sign must be written as two dollar signs.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Adoption Trends | Economic Indicators</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="tooltips.js" defer></script>
+</head>
+<body>
+  <nav><a href='index.html'>Home</a><a href='consumer.html'>Consumer</a><a href='business.html'>Business</a><a href='country.html'>Country</a><a href='financial.html'>Financial sector</a><a href='housing.html'>Housing</a><a href='commodities.html'>Commodities</a><a href='ai.html' aria-current='page'>AI Adoption Trends</a><a href='history.html'>History</a></nav>
+  <main>
+    <h1>AI Adoption Trends</h1>
+    <p class="updated">Updated Oct 28, 2026 at 19:57 PDT</p>
+      <p>Each indicator compares its most recently available value to that of the baseline period, Oct 2023–Oct 2024. Values are computed monthly.<br/>
+      On a case by case basis, some indicators may have additional adjustments: e.g. 3-month averaging for highly variable series, or normalization by inflation.</p>
+    <section class="summary">
+      <h2>Summary</h2>
+      <ul><li>Improving: 12</li><li>Worsening: 4</li><li>Neutral: 0</li></ul>
+    </section>
+
+    <p class="hint">Hover over or tap a dotted-underlined column header for its description.</p>
+
+    <table><thead><tr><th><button type='button' class='info' popovertarget='col-help-0' style='anchor-name: --col-help-0'>Indicator</button><div id='col-help-0' class='tip' popover role='tooltip' style='position-anchor: --col-help-0'>The economic series being tracked. Its definition and any adjustments are described below the table.</div></th><th><button type='button' class='info' popovertarget='col-help-1' style='anchor-name: --col-help-1'>Baseline Value</button><div id='col-help-1' class='tip' popover role='tooltip' style='position-anchor: --col-help-1'>The indicator's average over the baseline period, Oct 2023–Oct 2024, after any adjustments.</div></th><th><button type='button' class='info' popovertarget='col-help-2' style='anchor-name: --col-help-2'>Current Value</button><div id='col-help-2' class='tip' popover role='tooltip' style='position-anchor: --col-help-2'>The indicator's average over the most recent months, after the same adjustments. When a series has no data yet for those months, its latest available value is used.</div></th><th><button type='button' class='info' popovertarget='col-help-3' style='anchor-name: --col-help-3'>Data Unit</button><div id='col-help-3' class='tip' popover role='tooltip' style='position-anchor: --col-help-3'>The unit the series is published in by its source, for example billions of dollars or an index level.</div></th><th><button type='button' class='info' popovertarget='col-help-4' style='anchor-name: --col-help-4'>Delta</button><div id='col-help-4' class='tip' popover role='tooltip' style='position-anchor: --col-help-4'>How far the indicator has moved from the baseline value to the current value.<br><br>Shaded <span class="swatch improved">green</span> when the indicator moved in its good direction and <span class="swatch worsened">red</span> when it moved the other way; neutral indicators and unchanged values are not shaded.<br><br>Bold when larger than 10 (in either direction) and measured in % or % pts, to flag the biggest moves.</div></th><th><button type='button' class='info' popovertarget='col-help-5' style='anchor-name: --col-help-5'>Unit - Delta</button><div id='col-help-5' class='tip' popover role='tooltip' style='position-anchor: --col-help-5'>How the Delta is measured: <strong>%</strong> is a percent change, used for levels, prices and indexes; <strong>% pts</strong> (percentage points) is a simple difference, used for series that are already rates, such as an unemployment rate; <strong>&Delta;</strong> is a simple difference in the series' own units, used for index readings where a percent change would mislead.</div></th><th><button type='button' class='info' popovertarget='col-help-6' style='anchor-name: --col-help-6'>Improves when</button><div id='col-help-6' class='tip' popover role='tooltip' style='position-anchor: --col-help-6'>Which way is good news: <strong>rising</strong> means a rise is an improvement, <strong>falling</strong> means a fall is an improvement, and <strong>neutral</strong> means the move is shown but not judged.</div></th></tr></thead><tbody>
+<tr><td>NVIDIA Stock Price</td><td class='num'>88.40</td><td class='num'>221.67</td><td>U.S. Dollars</td><td class='num' style='background: #C6EFCE; font-weight: bold'>150.76</td><td>%</td><td>rising</td></tr>
+<tr><td>Percentage of the S&amp;P 500 Market Capitalization that is AI-related stocks</td><td class='num'>12.11</td><td class='num'>7.36</td><td>U.S. Dollars</td><td class='num' style='background: #FFC7CE'>-4.75</td><td>% pts</td><td>rising</td></tr>
+<tr><td>Percentage of the S&amp;P 500 Returns that is AI-related stocks</td><td class='num'>42.99</td><td class='num'>48.63</td><td>U.S. Dollars</td><td class='num' style='background: #C6EFCE'>5.63</td><td>% pts</td><td>rising</td></tr>
+<tr><td>PHLX Semiconductor Index</td><td class='num'>4,632.10</td><td class='num'>11,952.25</td><td>Index</td><td class='num' style='background: #C6EFCE; font-weight: bold'>158.03</td><td>%</td><td>rising</td></tr>
+<tr><td>Hyperscaler Stock Index</td><td class='num'>0.89</td><td class='num'>1.47</td><td>USD</td><td class='num' style='background: #C6EFCE; font-weight: bold'>65.92</td><td>%</td><td>rising</td></tr>
+<tr><td>TSMC Stock Price</td><td class='num'>0.74</td><td class='num'>5.62</td><td>USD</td><td class='num' style='background: #C6EFCE; font-weight: bold'>656.68</td><td>%</td><td>rising</td></tr>
+<tr><td>Generative AI adoption outside work, adults 18-64</td><td class='num'>32.09</td><td class='num'>49.49</td><td>Percent</td><td class='num' style='background: #C6EFCE; font-weight: bold'>17.40</td><td>% pts</td><td>rising</td></tr>
+<tr><td>Businesses using AI in the past month (Census BTOS)</td><td class='num'>4.95</td><td class='num'>22.95</td><td>Percent of businesses</td><td class='num' style='background: #C6EFCE; font-weight: bold'>18.01</td><td>% pts</td><td>rising</td></tr>
+<tr><td>Businesses paying for AI tools (Ramp AI Index)</td><td class='num'>30.82</td><td class='num'>55.55</td><td>Percent of businesses</td><td class='num' style='background: #C6EFCE; font-weight: bold'>24.73</td><td>% pts</td><td>rising</td></tr>
+<tr><td>Construction spending: power</td><td class='num'>186,826.89</td><td class='num'>185,429.28</td><td>Millions of Dollars, Seasonally Adjusted Annual Rate</td><td class='num' style='background: #FFC7CE'>-0.75</td><td>%</td><td>rising</td></tr>
+<tr><td>CPI, electricity</td><td class='num'>4.14</td><td class='num'>4.08</td><td>Index 1982-1984=100</td><td class='num' style='background: #C6EFCE'>-0.06</td><td>% pts</td><td>falling</td></tr>
+<tr><td>Real average hourly earnings: electrical contractors</td><td class='num'>41.79</td><td class='num'>43.61</td><td>Dollars per Hour</td><td class='num' style='background: #C6EFCE'>4.36</td><td>%</td><td>rising</td></tr>
+<tr><td>Employment: electrical contractors</td><td class='num'>1,088.08</td><td class='num'>1,156.13</td><td>Thousands of Persons</td><td class='num' style='background: #C6EFCE'>6.25</td><td>%</td><td>rising</td></tr>
+<tr><td>Construction job postings (Indeed)</td><td class='num'>136.76</td><td class='num'>125.63</td><td>Index Feb, 1 2020=100</td><td class='num' style='background: #FFC7CE'>-8.14</td><td>%</td><td>rising</td></tr>
+<tr><td>Electrical engineering job postings (Indeed)</td><td class='num'>137.09</td><td class='num'>146.27</td><td>Index Feb, 1 2020=100</td><td class='num' style='background: #C6EFCE'>6.69</td><td>%</td><td>rising</td></tr>
+<tr><td>Employment: computing infrastructure, data processing and hosting</td><td class='num'>482.79</td><td class='num'>457.80</td><td>Thousands of Persons</td><td class='num' style='background: #FFC7CE'>-5.18</td><td>%</td><td>rising</td></tr>
+</tbody></table>
+
+    <section class='content-block'><h2>8 AI stocks represent more than 40% of S&amp;P 500</h2><figure class='chart'><img src='ai/ai_sp500.svg' alt='AI stocks in the S&amp;P 500'></figure><div class='commentary'><!-- Your commentary here, in Markdown. This line does not appear on the page. -->
+
+<p>8 AI-driven stocks represent almost 40% of the market capitalization of the S&amp;P 500, and almost 50% of the gains the index made since October 2024.</p>
+<p>The 8 stocks are: NVDA, AAPL, GOOG, MSFT,AMZN, META, AVGO, TSLA</p></div></section>
+
+    <section class="indicator-notes">
+      <h2>What each indicator means</h2>
+      <ul>
+<li><strong>NVIDIA Stock Price</strong>: Sentiment gauge for a single company; read alongside ai_sox_index.<br><span class='citations'>Reference: <a href='https://finance.yahoo.com/quote/NVDA'>[1]</a></span></li>
+<li><strong>Percentage of the S&amp;P 500 Market Capitalization that is AI-related stocks</strong>: Percentage of the S&amp;P 500 Market Capitalization that is attributable to AI-related stocks<br><span class='transforms'>Converted to the combined market cap of NVDA, AAPL, GOOG, MSFT, AMZN, META, AVGO, TSLA as a percentage of the S&amp;P 500&#x27;s.</span><br><span class='citations'>References: <a href='https://finance.yahoo.com/quote/%5EGSPC'>[2]</a>, <a href='https://finance.yahoo.com/quote/NVDA'>[3]</a>, <a href='https://finance.yahoo.com/quote/AAPL'>[4]</a>, <a href='https://finance.yahoo.com/quote/GOOG'>[5]</a>, <a href='https://finance.yahoo.com/quote/MSFT'>[6]</a>, <a href='https://finance.yahoo.com/quote/AMZN'>[7]</a>, <a href='https://finance.yahoo.com/quote/META'>[8]</a>, <a href='https://finance.yahoo.com/quote/AVGO'>[9]</a>, <a href='https://finance.yahoo.com/quote/TSLA'>[10]</a></span></li>
+<li><strong>Percentage of the S&amp;P 500 Returns that is AI-related stocks</strong>: Percentage of the S&amp;P 500 Returns that is attributable to AI-related stocks<br><span class='transforms'>Converted to the dollar gain in the combined market cap of NVDA, AAPL, GOOG, MSFT, AMZN, META, AVGO, TSLA since baseline start, as a percentage of the S&amp;P 500&#x27;s gain.</span><br><span class='citations'>References: <a href='https://finance.yahoo.com/quote/%5EGSPC'>[2]</a>, <a href='https://finance.yahoo.com/quote/NVDA'>[3]</a>, <a href='https://finance.yahoo.com/quote/AAPL'>[4]</a>, <a href='https://finance.yahoo.com/quote/GOOG'>[5]</a>, <a href='https://finance.yahoo.com/quote/MSFT'>[6]</a>, <a href='https://finance.yahoo.com/quote/AMZN'>[7]</a>, <a href='https://finance.yahoo.com/quote/META'>[8]</a>, <a href='https://finance.yahoo.com/quote/AVGO'>[9]</a>, <a href='https://finance.yahoo.com/quote/TSLA'>[10]</a></span></li>
+<li><strong>PHLX Semiconductor Index</strong>: 30 largest U.S.-traded companies primarily involved in the design, distribution, manufacture, and sale of semiconductors.<br><span class='citations'>Reference: <a href='https://finance.yahoo.com/quote/%5ESOX'>[11]</a></span></li>
+<li><strong>Hyperscaler Stock Index</strong>: Hyperscaler stock index composed of major tech companies like Google. Daily stock prices in USD.<br><span class='transforms'>Averaged with AMZN, MSFT into an equal-weighted index; each stock is scaled to its peak price in the baseline window.</span><br><span class='citations'>References: <a href='https://finance.yahoo.com/quote/GOOG'>[12]</a>, <a href='https://finance.yahoo.com/quote/AMZN'>[13]</a>, <a href='https://finance.yahoo.com/quote/MSFT'>[14]</a></span></li>
+<li><strong>TSMC Stock Price</strong>: Chipmakers stock index composed of major chipmaking companies like TSMC. Daily stock prices in USD.<br><span class='transforms'>Averaged with 000660.KS, MU into an equal-weighted index; each stock is scaled to its peak price in the baseline window.</span><br><span class='citations'>References: <a href='https://finance.yahoo.com/quote/2330.TW'>[15]</a>, <a href='https://finance.yahoo.com/quote/000660.KS'>[16]</a>, <a href='https://finance.yahoo.com/quote/MU'>[17]</a></span></li>
+<li><strong>Generative AI adoption outside work, adults 18-64</strong>: Real-Time Population Survey GenAI Adoption Tracker. History from Aug 2024.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/RPSGENAIUSAGESHARENONWORK'>[18]</a></span></li>
+<li><strong>Businesses using AI in the past month (Census BTOS)</strong>: This is a survey-based measure from the Census BTOS.<br><span class='citations'>Reference: <a href='https://ramp.com/data/ai-index'>[19]</a></span></li>
+<li><strong>Businesses paying for AI tools (Ramp AI Index)</strong>: Card and bill-pay data from Ramp customers, which skew tech-forward and VC-backed. Paid adoption only; reads well above Census by construction.<br><span class='citations'>Reference: <a href='https://ramp.com/data/ai-index'>[20]</a></span></li>
+<li><strong>Construction spending: power</strong>: Generation and grid build, the other physical bottleneck alongside data centers.<br><span class='transforms'>Adjusted for inflation with price index PPIACO, in today&#x27;s prices; then smoothed with a trailing 3-month average.</span><br><span class='citations'>References: <a href='https://fred.stlouisfed.org/series/TLPWRCONS'>[21]</a>, <a href='https://fred.stlouisfed.org/series/PPIACO'>[22]</a></span></li>
+<li><strong>CPI, electricity</strong>: Household cost side of the data center build.<br><span class='transforms'>Converted to the 12-month percent change.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/CUSR0000SEHF01'>[23]</a></span></li>
+<li><strong>Real average hourly earnings: electrical contractors</strong>: Industry (NAICS 23821), not occupation: occupational wages (OEWS) are annual. From the BLS API: FRED does not carry NAICS 238210 detail.<br><span class='transforms'>Adjusted for inflation with price index CPIAUCSL, in today&#x27;s prices.</span><br><span class='citations'>References: <a href='https://data.bls.gov/timeseries/CES2023821003'>[24]</a>, <a href='https://fred.stlouisfed.org/series/CPIAUCSL'>[25]</a></span></li>
+<li><strong>Employment: electrical contractors</strong>: Likely a better tightness signal than wages, which adjust slowly. From the BLS API: FRED does not carry NAICS 238210 detail.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://data.bls.gov/timeseries/CES2023821001'>[26]</a></span></li>
+<li><strong>Construction job postings (Indeed)</strong>: Closest proxy for electrician openings: no occupation-level openings series exists. Indeed requires permission for republication.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/IHLIDXUSTPCONS'>[27]</a></span></li>
+<li><strong>Electrical engineering job postings (Indeed)</strong>: Indeed requires permission for republication.<br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/IHLIDXUSTPELECENGI'>[28]</a></span></li>
+<li><strong>Employment: computing infrastructure, data processing and hosting</strong>: NAICS 518.<br><span class='transforms'>Smoothed with a trailing 3-month average.</span><br><span class='citations'>Reference: <a href='https://fred.stlouisfed.org/series/CES5051800001'>[29]</a></span></li>
+</ul>
+    </section>
+  </main>
+  <!-- Shared footer, inserted into every page. Placeholder: year -->
+<footer>
+  <p>
+    A personal, non-commercial project. &copy; 2026 Bernard Fraenkel.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>:
+    you may share and adapt this site's content with attribution, for non-commercial purposes only,
+    and adaptations must use the same license. Any business or commercial use requires written permission.
+    The license covers this site's own content (analysis, descriptions and presentation), not the underlying data.
+  </p>
+  <p>
+    Source data remain the property of their respective owners:
+    Federal Reserve Bank of St. Louis (FRED&reg;), U.S. Bureau of Labor Statistics,
+    U.S. Department of the Treasury (Fiscal Data), Yahoo Finance, YouGov and Ramp.
+    FRED&reg; is a registered trademark of the Federal Reserve Bank of St. Louis.
+    Third-party series are subject to their owners' copyrights and terms of use.
+  </p>
+  <p>For information only. This is not investment, financial or legal advice.</p>
+</footer>
+
+</body>
+</html>

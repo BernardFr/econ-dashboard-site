@@ -1,0 +1,113 @@
+/* Shared stylesheet, copied as-is to site/style.css. */
+:root {
+  --text: #121212;
+  --muted: #595959;
+  --rule: #d9d9d9;          /* hairlines between rows and items */
+  --rule-strong: #121212;   /* the rules that structure the page: over section heads, under table heads */
+  --accent: #a3192b;        /* used sparingly: the top bar, the current page, small labels */
+  --header-bg: transparent; /* table heads are marked by a rule, not a fill (the Excel sheets keep LIGHT_BLUE) */
+  --link: #1d4f91;
+  /* Serif for headlines and prose, sans for tables, navigation and small print (loaded in each page's <head>). */
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", -apple-system, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+  max-width: 1180px;
+  color: var(--text);
+  background: #fff;
+  border-top: 5px solid var(--accent);
+}
+
+p { margin: 0 0 10px; }
+main > p { max-width: 80ch; }  /* prose stays readable on wide screens; tables keep the full width */
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+h1, h2, h3 { margin: 0; }
+h1 { font-size: 34px; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; margin: 18px 0 4px; }
+h2 {
+  font-size: 21px; font-weight: 700; line-height: 1.2;
+  border-top: 1px solid var(--rule-strong); padding-top: 6px; margin: 28px 0 8px;
+}
+/* Small uppercase labels, e.g. "Economic Actors" on the home page. */
+h3 {
+  font-family: var(--sans); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--accent); margin: 20px 0 6px;
+}
+nav, table, .tip, .updated, .hint, footer { font-family: var(--sans); }
+
+nav {
+  display: flex; flex-wrap: wrap; gap: 0 18px;
+  font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--rule); padding: 10px 0 0;
+}
+nav a { color: var(--text); text-decoration: none; padding-bottom: 7px; border-bottom: 3px solid transparent; }
+nav a:hover { color: var(--accent); }
+nav a[aria-current="page"] { border-bottom-color: var(--accent); }
+
+.updated { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
+.hint { color: var(--muted); font-size: 12.5px; font-style: italic; margin: 4px 0 6px; }
+main > ul { margin: 0 0 10px; padding-left: 20px; }
+main > ul li { margin: 1px 0; }
+
+.summary h2 { margin-bottom: 4px; }
+.summary ul { margin: 0; padding-left: 20px; font-family: var(--sans); font-size: 14px; }
+.summary li { line-height: 1.35; }
+
+/* On desktop the table never scrolls sideways: it spans the page and its text cells wrap. */
+table { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.3; }
+th, td { padding: 4px 6px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: var(--header-bg); font-weight: 700; border-bottom: 2px solid var(--rule-strong); vertical-align: bottom; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* On a phone the table is wider than the screen: it scrolls sideways by itself rather than the whole page. */
+@media (max-width: 700px) {
+  main > table { display: block; overflow-x: auto; }
+}
+
+/* History page: one wide table per actor, scrolling sideways, indicator names pinned on the left. */
+.history-actor h2 { margin-top: 24px; }
+.history { overflow-x: auto; }
+.history table { width: auto; }
+.history th:first-child, .history td:first-child { position: sticky; left: 0; background: #fff; min-width: 14em; }
+.history th:first-child { background: #fff; }
+.history th { white-space: nowrap; }
+.history th.num { text-align: right; }
+
+/* Content blocks below the table (content/<actor>/*.md): heading, chart, commentary. */
+.content-block { margin-top: 28px; max-width: 800px; }
+.chart { margin: 10px 0 0; }
+.chart img { display: block; width: 100%; height: auto; }
+.commentary { max-width: 72ch; margin-top: 10px; }
+
+/* Column headers that are buttons popping up a tooltip (see tooltips.js), marked by a dotted underline. */
+button.info {
+  padding: 0; border: none; background: none; color: inherit; font: inherit; text-align: left;
+  text-decoration: underline dotted; text-underline-offset: 3px; cursor: help;
+}
+button.info:hover, button.info:focus-visible { color: var(--link); }
+.tip {
+  max-width: min(320px, calc(100vw - 32px)); padding: 8px 10px;
+  border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  background: #fff; color: var(--text); font-size: 13px; font-weight: normal; line-height: 1.45;
+}
+/* Pin the tip under its button where anchor positioning exists; elsewhere it stays centered on screen. */
+@supports (position-area: bottom) {
+  .tip { inset: auto; margin: 4px 0; position-area: bottom span-right; position-try-fallbacks: flip-inline, flip-block; }
+}
+.swatch { padding: 0 4px; border-radius: 3px; }
+.swatch.improved { background: #C6EFCE; }  /* EXCEL_GREEN in report.py */
+.swatch.worsened { background: #FFC7CE; }  /* EXCEL_RED in report.py */
+
+.indicator-notes { margin-top: 28px; max-width: 80ch; }
+.indicator-notes ul { padding-left: 20px; }
+.indicator-notes li { margin-bottom: 6px; font-size: 15px; line-height: 1.4; }
+.indicator-notes .transforms { color: var(--muted); }
+.indicator-notes .citations { font-family: var(--sans); font-size: 12px; }
+.indicator-notes .citations a { color: var(--link); }
+
+footer { margin-top: 36px; padding-top: 8px; border-top: 1px solid var(--rule-strong); color: var(--muted); font-size: 11.5px; line-height: 1.4; max-width: 90ch; }
+footer p { margin: 0 0 6px; }
