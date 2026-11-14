@@ -1,0 +1,88 @@
+<!doctype html>
+<!--
+  Consumer score home page (site/score/index.html). Edit freely; score_site.py fills in these placeholders:
+    updated, nav, score_month, score, score_change, score_chart, score_chart_detail, score_chart_detail_label,
+    score_chart_detail_style,
+    pillar_count, pillar_rows,
+    score_items_table, score_item_count, content_blocks, footer
+  A literal dollar sign must be written as two dollar signs.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consumer Score | Economic Indicators</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav><a href='index.html' aria-current='page'>Score</a><a href='jobs.html'>Jobs</a><a href='income.html'>Income</a><a href='cost_of_living.html'>Cost of living</a><a href='debt_stress.html'>Debt stress</a><a href='buffers.html'>Buffers</a><a href='presidents.html'>Presidents</a><a href='../index.html' class='site-switch'>Economic Indicators</a></nav>
+  <main>
+    <h1>Consumer score</h1>
+    <p class="updated">Updated Nov 13, 2026 at 18:55 PST</p>
+
+    <section class="score-card" aria-label="Consumer score, October 2026">
+      <div class="score-card-main">
+        <h3>Consumer score &middot; October 2026</h3>
+        <p class="score-headline"><strong>58</strong> / 100 <span class="score-change">Down from 65 in Oct 2024</span></p>
+        <figure class="chart score-chart chart-frame">
+          <img id="score-chart" src="charts/overall.svg" data-score="charts/overall.svg" data-detail="charts/overall_detail.svg"
+               alt="Consumer score by month">
+          <label class="chart-detail" style="left: 83.3%; top: 25.5%"><input type="checkbox" id="score-chart-toggle"> Show the pillars</label>
+        </figure>
+      </div>
+      <div class="score-card-pillars">
+        <h3>5 pillars</h3>
+        <p class="hint">Click a pillar for its score items and charts.</p>
+        <a class='pillar-row' href='jobs.html'><span class='pillar-name'>Jobs<span class='pillar-weight'>30%</span></span><span class='pillar-score'>77</span><span class='bar'><span style='width: 77%'></span></span></a>
+<a class='pillar-row' href='income.html'><span class='pillar-name'>Income<span class='pillar-weight'>22.5%</span></span><span class='pillar-score'>44</span><span class='bar'><span style='width: 44%'></span></span></a>
+<a class='pillar-row' href='cost_of_living.html'><span class='pillar-name'>Cost of living<span class='pillar-weight'>22.5%</span></span><span class='pillar-score'>56</span><span class='bar'><span style='width: 56%'></span></span></a>
+<a class='pillar-row' href='debt_stress.html'><span class='pillar-name'>Debt stress<span class='pillar-weight'>15%</span></span><span class='pillar-score'>51</span><span class='bar'><span style='width: 51%'></span></span></a>
+<a class='pillar-row' href='buffers.html'><span class='pillar-name'>Buffers<span class='pillar-weight'>10%</span></span><span class='pillar-score'>57</span><span class='bar'><span style='width: 57%'></span></span></a>
+      </div>
+    </section>
+
+    <h2>How the score is built</h2>
+    <p>A 0&ndash;100 reading of how the consumer is doing. Each indicator is converted to 0&ndash;100 with one of three curves
+      (percentile, threshold or target), the scores are averaged within each pillar, and the pillars are combined with a
+      weighted geometric mean, each floored at 5, so strength in one pillar cannot fully offset a collapse in another.</p>
+
+    
+
+    <section class="score-items">
+      <h2>What goes into the score</h2>
+      <p>16 indicators in 5 pillars. Click a pillar or an indicator for its details.</p>
+      <table><thead><tr><th scope='col'>Indicator</th><th scope='col'>Series</th><th scope='col'>Curve</th></tr></thead><tbody><tr class='group'><th colspan='3' scope='colgroup'><a href='jobs.html'>Jobs</a> &middot; 30%</th></tr><tr><td><a href='jobs.html#score_unemployment_rate'>Unemployment rate</a></td><td class='series'>UNRATE</td><td>Percentile, lower is better</td></tr><tr><td><a href='jobs.html#score_prime_age_employment'>Prime-age employment rate</a></td><td class='series'>LNS12300060</td><td>Percentile</td></tr><tr><td><a href='jobs.html#score_quits_rate'>Quits rate</a></td><td class='series'>JTSQUR</td><td>Percentile</td></tr><tr><td><a href='jobs.html#score_initial_claims'>Initial claims</a></td><td class='series'>IC4WSA, PAYEMS</td><td>Percentile, lower is better</td></tr><tr class='group'><th colspan='3' scope='colgroup'><a href='income.html'>Income</a> &middot; 22.5%</th></tr><tr><td><a href='income.html#score_real_income_ex_transfers'>Real income excluding transfers</a></td><td class='series'>W875RX1, POPTHM</td><td>Percentile</td></tr><tr><td><a href='income.html#score_real_wages'>Real wages</a></td><td class='series'>ECIWAG, CPIAUCSL</td><td>Percentile</td></tr><tr><td><a href='income.html#score_real_spending'>Real spending</a></td><td class='series'>PCEC96, POPTHM</td><td>Percentile</td></tr><tr class='group'><th colspan='3' scope='colgroup'><a href='cost_of_living.html'>Cost of living</a> &middot; 22.5%</th></tr><tr><td><a href='cost_of_living.html#score_inflation'>Inflation</a></td><td class='series'>CPIAUCSL</td><td>Target</td></tr><tr><td><a href='cost_of_living.html#score_gasoline'>Gasoline</a></td><td class='series'>GASREGW, CPIAUCSL</td><td>Percentile, lower is better</td></tr><tr><td><a href='cost_of_living.html#score_mortgage_payment_burden'>Mortgage payment burden</a></td><td class='series'>MORTGAGE30US, MSPUS, MEHOINUSA646N, A229RC0</td><td>Threshold, lower is better</td></tr><tr><td><a href='cost_of_living.html#score_groceries'>Groceries</a></td><td class='series'>CUSR0000SAF11</td><td>Target</td></tr><tr class='group'><th colspan='3' scope='colgroup'><a href='debt_stress.html'>Debt stress</a> &middot; 15%</th></tr><tr><td><a href='debt_stress.html#score_debt_service_ratio'>Debt service ratio</a></td><td class='series'>TDSP</td><td>Percentile, lower is better</td></tr><tr><td><a href='debt_stress.html#score_loan_delinquency'>Loan delinquency</a></td><td class='series'>DRCLACBS</td><td>Percentile, lower is better</td></tr><tr><td><a href='debt_stress.html#score_credit_card_rate'>Credit-card rate</a></td><td class='series'>TERMCBCCALLNS</td><td>Percentile, lower is better</td></tr><tr class='group'><th colspan='3' scope='colgroup'><a href='buffers.html'>Buffers</a> &middot; 10%</th></tr><tr><td><a href='buffers.html#score_saving_rate'>Saving rate</a></td><td class='series'>PSAVERT</td><td>Percentile</td></tr><tr><td><a href='buffers.html#score_net_worth_to_income'>Net worth / income</a></td><td class='series'>HNONWPDPI</td><td>Percentile</td></tr></tbody></table>
+      <p class="hint">Michigan sentiment and presidential approval stay on display in Economic Indicators, but outside the score.</p>
+    </section>
+  </main>
+  <script>
+    // The checkbox switches the score's chart to the one with each pillar, and back.
+    const scoreChart = document.getElementById("score-chart");
+    document.getElementById("score-chart-toggle").addEventListener("change", (event) => {
+      scoreChart.src = event.target.checked ? scoreChart.dataset.detail : scoreChart.dataset.score;
+    });
+  </script>
+  <!-- Shared footer, inserted into every page. Placeholder: year -->
+<footer>
+  <p>
+    A personal, non-commercial project. &copy; 2026 Bernard Fraenkel.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>:
+    you may share and adapt this site's content with attribution, for non-commercial purposes only,
+    and adaptations must use the same license. Any business or commercial use requires written permission.
+    The license covers this site's own content (analysis, descriptions and presentation), not the underlying data.
+  </p>
+  <p>
+    Source data remain the property of their respective owners:
+    Federal Reserve Bank of St. Louis (FRED&reg;), U.S. Bureau of Labor Statistics,
+    U.S. Department of the Treasury (Fiscal Data), Yahoo Finance, YouGov and Ramp.
+    FRED&reg; is a registered trademark of the Federal Reserve Bank of St. Louis.
+    Third-party series are subject to their owners' copyrights and terms of use.
+  </p>
+  <p>For information only. This is not investment, financial or legal advice.</p>
+</footer>
+
+</body>
+</html>

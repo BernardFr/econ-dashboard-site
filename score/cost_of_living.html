@@ -1,0 +1,70 @@
+<!doctype html>
+<!--
+  One page per pillar of the consumer score (site/score/<pillar key>.html). Edit freely; score_site.py fills in:
+    pillar_name, weight, updated, nav, table, content_blocks, score_item_descriptions, chart_dialog, footer
+  A literal dollar sign must be written as two dollar signs.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cost of living | Consumer Score</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav><a href='index.html'>Score</a><a href='jobs.html'>Jobs</a><a href='income.html'>Income</a><a href='cost_of_living.html' aria-current='page'>Cost of living</a><a href='debt_stress.html'>Debt stress</a><a href='buffers.html'>Buffers</a><a href='presidents.html'>Presidents</a><a href='../index.html' class='site-switch'>Economic Indicators</a></nav>
+  <main>
+    <h1>Cost of living</h1>
+    <p class="updated">Updated Nov 13, 2026 at 18:55 PST</p>
+    <p>22.5% of the consumer score. Its score is the average of its score items' scores, each 0&ndash;100.</p>
+    <p class="hint">Click a score item to see its chart, with a blue line at each inauguration.
+      The pillar score's chart can also show each of its score items.</p>
+
+    <table class='score'><thead><tr><th scope='col'>Score item</th><th class='num' scope='col'>Oct 2026</th><th class='num' scope='col'>&Delta; vs Oct 2024</th><th class='num' scope='col'>Q3 2026</th><th class='num' scope='col'>Q2 2026</th><th class='num' scope='col'>Q1 2026</th><th class='num' scope='col'>Q4 2025</th><th class='num' scope='col'>Q3 2025</th><th class='num' scope='col'>Q2 2025</th><th class='num' scope='col'>Q1 2025</th><th class='num' scope='col'>Q4 2024</th></tr></thead><tbody><tr><td><a class='chart-link' href='charts/score_inflation.svg'>Inflation</a></td><td class='num'>79.0</td><td class='num worsened'>-18.4</td><td class='num'>84.2</td><td class='num'>76.9</td><td class='num'>95.0</td><td class='num'>94.9</td><td class='num'>93.6</td><td class='num'>98.1</td><td class='num'>95.4</td><td class='num'>95.8</td></tr><tr><td><a class='chart-link' href='charts/score_gasoline.svg'>Gasoline</a></td><td class='num'>19.8</td><td class='num worsened'>-25.5</td><td class='num'>23.1</td><td class='num'>21.6</td><td class='num'>53.2</td><td class='num'>56.6</td><td class='num'>49.4</td><td class='num'>47.7</td><td class='num'>49.8</td><td class='num'>49.5</td></tr><tr><td><a class='chart-link' href='charts/score_mortgage_payment_burden.svg'>Mortgage payment burden</a></td><td class='num'>25.6</td><td class='num improved'>+3.2</td><td class='num'>34.7</td><td class='num'>35.6</td><td class='num'>39.0</td><td class='num'>34.0</td><td class='num'>26.9</td><td class='num'>21.6</td><td class='num'>19.9</td><td class='num'>20.1</td></tr><tr><td><a class='chart-link' href='charts/score_groceries.svg'>Groceries</a></td><td class='num'>98.8</td><td class='num improved'>+13.6</td><td class='num'>98.6</td><td class='num'>95.0</td><td class='num'>99.0</td><td class='num'>98.4</td><td class='num'>97.4</td><td class='num'>99.4</td><td class='num'>99.2</td><td class='num'>93.1</td></tr></tbody><tfoot><tr><td><a class='chart-link' href='charts/cost_of_living.svg' data-detail='charts/cost_of_living_detail.svg' data-detail-label='Show its score items' data-detail-style='left: 69.2%; top: 32.1%'>Pillar score</a></td><td class='num'>55.8</td><td class='num worsened'>-6.8</td><td class='num'>60.1</td><td class='num'>57.3</td><td class='num'>71.5</td><td class='num'>71.0</td><td class='num'>66.8</td><td class='num'>66.7</td><td class='num'>66.1</td><td class='num'>64.6</td></tr></tfoot></table>
+
+    
+
+    <section class="indicator-notes">
+      <h2>What each score item means</h2>
+      <ul><li id='score_inflation'><strong>Inflation</strong>: Headline CPI, year-over-year %. Scores 100 at the 2% target and falls faster below target than above it. <span class='transforms'>Curve: target 2, sigma 2.5 above and 1.5 below.</span> <span class='citations'>Series: <a href='https://fred.stlouisfed.org/series/CPIAUCSL' title='FRED, Federal Reserve Bank of St. Louis'>CPIAUCSL</a></span></li><li id='score_gasoline'><strong>Gasoline</strong>: Real price of regular gasoline. Kept despite being inside CPI, because frequently seen prices shape perceptions beyond their budget share. <span class='transforms'>Curve: percentile over Jan 1990 to Dec 2025, lower better.</span> <span class='citations'>Series: <a href='https://fred.stlouisfed.org/series/GASREGW' title='FRED, Federal Reserve Bank of St. Louis'>GASREGW</a>, <a href='https://fred.stlouisfed.org/series/CPIAUCSL' title='FRED, Federal Reserve Bank of St. Louis'>CPIAUCSL</a></span></li><li id='score_mortgage_payment_burden'><strong>Mortgage payment burden</strong>: Monthly principal and interest on 80% of the trailing 4-quarter average of the median new house price, as % of monthly median household income. Income is interpolated between annual values and carried forward with the growth of the 12-month average of per-capita disposable income. Midpoint 25%, below the Atlanta Fed&#x27;s 30%, which includes taxes and insurance. Replaces the raw mortgage rate. <span class='transforms'>Curve: threshold at 25, steepness 4, lower better.</span> <span class='citations'>Series: <a href='https://fred.stlouisfed.org/series/MORTGAGE30US' title='FRED, Federal Reserve Bank of St. Louis'>MORTGAGE30US</a>, <a href='https://fred.stlouisfed.org/series/MSPUS' title='FRED, Federal Reserve Bank of St. Louis'>MSPUS</a>, <a href='https://fred.stlouisfed.org/series/MEHOINUSA646N' title='FRED, Federal Reserve Bank of St. Louis'>MEHOINUSA646N</a>, <a href='https://fred.stlouisfed.org/series/A229RC0' title='FRED, Federal Reserve Bank of St. Louis'>A229RC0</a></span></li><li id='score_groceries'><strong>Groceries</strong>: CPI food at home, year-over-year %. <span class='transforms'>Curve: target 2, sigma 2.5 above and 1.5 below.</span> <span class='citations'>Series: <a href='https://fred.stlouisfed.org/series/CUSR0000SAF11' title='FRED, Federal Reserve Bank of St. Louis'>CUSR0000SAF11</a></span></li></ul>
+    </section>
+  </main>
+  <!-- Shared modal window, inserted into every page with indicator tables (placeholder chart_dialog): an indicator's
+     chart, opened by clicking its name (links of class chart-link); charts.js wires the links.
+     Placeholder: root, the path from the page to the site's root ("" or "../").
+     A link with data-detail="<chart>" and data-detail-label="<text>" shows a checkbox labelled <text> that switches
+     the chart to <chart> and back, e.g. a pillar's score alone or with its score items; data-detail-style places it
+     over the chart, below its legend. -->
+<dialog id="chart-dialog" class="chart-dialog" aria-label="Indicator chart">
+  <form method="dialog"><button class="chart-dialog-close" aria-label="Close">&times;</button></form>
+  <div class="chart-frame">
+    <img alt="">
+    <label class="chart-detail" hidden><input type="checkbox"> <span></span></label>
+  </div>
+</dialog>
+<script src="../charts.js"></script>
+
+  <!-- Shared footer, inserted into every page. Placeholder: year -->
+<footer>
+  <p>
+    A personal, non-commercial project. &copy; 2026 Bernard Fraenkel.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>:
+    you may share and adapt this site's content with attribution, for non-commercial purposes only,
+    and adaptations must use the same license. Any business or commercial use requires written permission.
+    The license covers this site's own content (analysis, descriptions and presentation), not the underlying data.
+  </p>
+  <p>
+    Source data remain the property of their respective owners:
+    Federal Reserve Bank of St. Louis (FRED&reg;), U.S. Bureau of Labor Statistics,
+    U.S. Department of the Treasury (Fiscal Data), Yahoo Finance, YouGov and Ramp.
+    FRED&reg; is a registered trademark of the Federal Reserve Bank of St. Louis.
+    Third-party series are subject to their owners' copyrights and terms of use.
+  </p>
+  <p>For information only. This is not investment, financial or legal advice.</p>
+</footer>
+
+</body>
+</html>

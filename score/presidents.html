@@ -1,0 +1,86 @@
+<!doctype html>
+<!--
+  Presidents page of the consumer score (site/score/presidents.html). Edit freely; score_site.py fills in:
+    updated, nav, presidents_table, content_blocks, chart_dialog, footer
+  A literal dollar sign must be written as two dollar signs.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presidents | Consumer Score</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav><a href='index.html'>Score</a><a href='jobs.html'>Jobs</a><a href='income.html'>Income</a><a href='cost_of_living.html'>Cost of living</a><a href='debt_stress.html'>Debt stress</a><a href='buffers.html'>Buffers</a><a href='presidents.html' aria-current='page'>Presidents</a><a href='../index.html' class='site-switch'>Economic Indicators</a></nav>
+  <main>
+    <h1>Presidents</h1>
+    <p class="updated">Updated Nov 13, 2026 at 18:55 PST</p>
+    <p>Each pillar's score, and the overall score, for recent presidential terms.
+      "@N mo" is the score at the same point in the term as today, N months in; "end" is the score at the end of the term.</p>
+    <p>Under each column is the month it is read at. Click a pillar or the overall score to see its chart, with a blue line at each inauguration.</p>
+
+    <h3>Presidential Terms</h3>
+    <div class="terms">
+      <table>
+        <thead><tr><th>Term</th><th>President</th><th>Inauguration</th></tr></thead>
+        <tbody>
+          <tr><td>President-43-1</td><td>George W. Bush</td><td>Jan 2001</td></tr>
+          <tr><td>President-43-2</td><td>George W. Bush</td><td>Jan 2005</td></tr>
+          <tr><td>President-44-1</td><td>Barack Obama</td><td>Jan 2009</td></tr>
+          <tr><td>President-44-2</td><td>Barack Obama</td><td>Jan 2013</td></tr>
+          <tr><td>President-45</td><td>Donald Trump</td><td>Jan 2017</td></tr>
+          <tr><td>President-46</td><td>Joe Biden</td><td>Jan 2021</td></tr>
+          <tr><td>President-47</td><td>Donald Trump</td><td>Jan 2025</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    
+
+    <h3>Scores by term</h3>
+    <div class='history'><table class='score'><thead><tr><th scope='col'>Pillar</th><th class='num' scope='col'>Weight</th><th class='num' scope='col'>President-43-1 @25 mo</th><th class='num' scope='col'>President-43-1 end</th><th class='num' scope='col'>President-43-2 @25 mo</th><th class='num' scope='col'>President-43-2 end</th><th class='num' scope='col'>President-44-1 @25 mo</th><th class='num' scope='col'>President-44-1 end</th><th class='num' scope='col'>President-44-2 @25 mo</th><th class='num' scope='col'>President-44-2 end</th><th class='num' scope='col'>President-45 @25 mo</th><th class='num' scope='col'>President-45 end</th><th class='num' scope='col'>President-46 @25 mo</th><th class='num' scope='col'>President-46 end</th><th class='num' scope='col'>President-47 @25 mo</th></tr><tr><th></th><th></th><th class='num'>Nov 2002</th><th class='num'>Oct 2004</th><th class='num'>Nov 2006</th><th class='num'>Oct 2008</th><th class='num'>Nov 2010</th><th class='num'>Oct 2012</th><th class='num'>Nov 2014</th><th class='num'>Oct 2016</th><th class='num'>Nov 2018</th><th class='num'>Oct 2020</th><th class='num'>Nov 2022</th><th class='num'>Oct 2024</th><th class='num'>Nov 2026</th></tr></thead><tbody><tr><td><a class='chart-link' href='charts/jobs.svg' data-detail='charts/jobs_detail.svg' data-detail-label='Show its score items' data-detail-style='left: 69.2%; top: 32.1%'>Jobs</a></td><td class='num'>30%</td><td class='num'></td><td class='num'></td><td class='num'></td><td class='num'>25.7</td><td class='num'>6.8</td><td class='num'>18.9</td><td class='num'>41.3</td><td class='num'>55.9</td><td class='num'>79.9</td><td class='num'>24.4</td><td class='num'>90.4</td><td class='num'>76.0</td><td class='num'>76.7</td></tr><tr><td><a class='chart-link' href='charts/income.svg' data-detail='charts/income_detail.svg' data-detail-label='Show its score items' data-detail-style='left: 69.2%; top: 28.8%'>Income</a></td><td class='num'>22.5%</td><td class='num'></td><td class='num'></td><td class='num'></td><td class='num'>11.8</td><td class='num'>64.5</td><td class='num'>38.9</td><td class='num'>77.0</td><td class='num'>44.6</td><td class='num'>58.9</td><td class='num'>49.8</td><td class='num'>12.9</td><td class='num'>64.8</td><td class='num'>44.0</td></tr><tr><td><a class='chart-link' href='charts/cost_of_living.svg' data-detail='charts/cost_of_living_detail.svg' data-detail-label='Show its score items' data-detail-style='left: 69.2%; top: 32.1%'>Cost of living</a></td><td class='num'>22.5%</td><td class='num'></td><td class='num'></td><td class='num'></td><td class='num'>35.3</td><td class='num'>68.0</td><td class='num'>65.6</td><td class='num'>63.6</td><td class='num'>55.8</td><td class='num'>62.3</td><td class='num'>77.3</td><td class='num'>10.5</td><td class='num'>62.6</td><td class='num'>55.8</td></tr><tr><td><a class='chart-link' href='charts/debt_stress.svg' data-detail='charts/debt_stress_detail.svg' data-detail-label='Show its score items' data-detail-style='left: 69.2%; top: 28.8%'>Debt stress</a></td><td class='num'>15%</td><td class='num'></td><td class='num'></td><td class='num'></td><td class='num'>33.5</td><td class='num'>35.8</td><td class='num'>70.8</td><td class='num'>79.5</td><td class='num'>67.3</td><td class='num'>57.4</td><td class='num'>76.1</td><td class='num'>61.1</td><td class='num'>46.7</td><td class='num'>51.5</td></tr><tr><td><a class='chart-link' href='charts/buffers.svg' data-detail='charts/buffers_detail.svg' data-detail-label='Show its score items' data-detail-style='left: 69.2%; top: 25.5%'>Buffers</a></td><td class='num'>10%</td><td class='num'></td><td class='num'></td><td class='num'></td><td class='num'>20.4</td><td class='num'>44.7</td><td class='num'>54.4</td><td class='num'>50.9</td><td class='num'>51.2</td><td class='num'>67.8</td><td class='num'>94.7</td><td class='num'>49.4</td><td class='num'>71.6</td><td class='num'>56.9</td></tr></tbody><tfoot><tr><td><a class='chart-link' href='charts/overall.svg' data-detail='charts/overall_detail.svg' data-detail-label='Show the pillars' data-detail-style='left: 83.3%; top: 25.5%'>Overall</a></td><td class='num'></td><td class='num'></td><td class='num'></td><td class='num'></td><td class='num'>23.5</td><td class='num'>29.3</td><td class='num'>39.9</td><td class='num'>59.0</td><td class='num'>54.1</td><td class='num'>66.0</td><td class='num'>50.5</td><td class='num'>31.9</td><td class='num'>64.9</td><td class='num'>57.6</td></tr></tfoot></table></div>
+  </main>
+  <script>
+    // Open the table scrolled all the way right, on the current term.
+    for (const box of document.querySelectorAll(".history")) box.scrollLeft = box.scrollWidth;
+  </script>
+  <!-- Shared modal window, inserted into every page with indicator tables (placeholder chart_dialog): an indicator's
+     chart, opened by clicking its name (links of class chart-link); charts.js wires the links.
+     Placeholder: root, the path from the page to the site's root ("" or "../").
+     A link with data-detail="<chart>" and data-detail-label="<text>" shows a checkbox labelled <text> that switches
+     the chart to <chart> and back, e.g. a pillar's score alone or with its score items; data-detail-style places it
+     over the chart, below its legend. -->
+<dialog id="chart-dialog" class="chart-dialog" aria-label="Indicator chart">
+  <form method="dialog"><button class="chart-dialog-close" aria-label="Close">&times;</button></form>
+  <div class="chart-frame">
+    <img alt="">
+    <label class="chart-detail" hidden><input type="checkbox"> <span></span></label>
+  </div>
+</dialog>
+<script src="../charts.js"></script>
+
+  <!-- Shared footer, inserted into every page. Placeholder: year -->
+<footer>
+  <p>
+    A personal, non-commercial project. &copy; 2026 Bernard Fraenkel.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>:
+    you may share and adapt this site's content with attribution, for non-commercial purposes only,
+    and adaptations must use the same license. Any business or commercial use requires written permission.
+    The license covers this site's own content (analysis, descriptions and presentation), not the underlying data.
+  </p>
+  <p>
+    Source data remain the property of their respective owners:
+    Federal Reserve Bank of St. Louis (FRED&reg;), U.S. Bureau of Labor Statistics,
+    U.S. Department of the Treasury (Fiscal Data), Yahoo Finance, YouGov and Ramp.
+    FRED&reg; is a registered trademark of the Federal Reserve Bank of St. Louis.
+    Third-party series are subject to their owners' copyrights and terms of use.
+  </p>
+  <p>For information only. This is not investment, financial or legal advice.</p>
+</footer>
+
+</body>
+</html>

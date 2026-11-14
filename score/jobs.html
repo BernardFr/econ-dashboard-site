@@ -1,0 +1,70 @@
+<!doctype html>
+<!--
+  One page per pillar of the consumer score (site/score/<pillar key>.html). Edit freely; score_site.py fills in:
+    pillar_name, weight, updated, nav, table, content_blocks, score_item_descriptions, chart_dialog, footer
+  A literal dollar sign must be written as two dollar signs.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jobs | Consumer Score</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav><a href='index.html'>Score</a><a href='jobs.html' aria-current='page'>Jobs</a><a href='income.html'>Income</a><a href='cost_of_living.html'>Cost of living</a><a href='debt_stress.html'>Debt stress</a><a href='buffers.html'>Buffers</a><a href='presidents.html'>Presidents</a><a href='../index.html' class='site-switch'>Economic Indicators</a></nav>
+  <main>
+    <h1>Jobs</h1>
+    <p class="updated">Updated Nov 13, 2026 at 18:55 PST</p>
+    <p>30% of the consumer score. Its score is the average of its score items' scores, each 0&ndash;100.</p>
+    <p class="hint">Click a score item to see its chart, with a blue line at each inauguration.
+      The pillar score's chart can also show each of its score items.</p>
+
+    <table class='score'><thead><tr><th scope='col'>Score item</th><th class='num' scope='col'>Oct 2026</th><th class='num' scope='col'>&Delta; vs Oct 2024</th><th class='num' scope='col'>Q3 2026</th><th class='num' scope='col'>Q2 2026</th><th class='num' scope='col'>Q1 2026</th><th class='num' scope='col'>Q4 2025</th><th class='num' scope='col'>Q3 2025</th><th class='num' scope='col'>Q2 2025</th><th class='num' scope='col'>Q1 2025</th><th class='num' scope='col'>Q4 2024</th></tr></thead><tbody><tr><td><a class='chart-link' href='charts/score_unemployment_rate.svg'>Unemployment rate</a></td><td class='num'>82.0</td><td class='num'>+0.0</td><td class='num'>81.4</td><td class='num'>77.0</td><td class='num'>75.1</td><td class='num'>74.5</td><td class='num'>78.1</td><td class='num'>79.6</td><td class='num'>82.7</td><td class='num'>82.0</td></tr><tr><td><a class='chart-link' href='charts/score_prime_age_employment.svg'>Prime-age employment rate</a></td><td class='num'>82.5</td><td class='num worsened'>-5.3</td><td class='num'>78.8</td><td class='num'>84.5</td><td class='num'>85.8</td><td class='num'>84.1</td><td class='num'>82.4</td><td class='num'>81.9</td><td class='num'>81.8</td><td class='num'>84.4</td></tr><tr><td><a class='chart-link' href='charts/score_quits_rate.svg'>Quits rate</a></td><td class='num'>42.3</td><td class='num worsened'>-5.5</td><td class='num'>39.9</td><td class='num'>40.6</td><td class='num'>42.5</td><td class='num'>38.9</td><td class='num'>47.2</td><td class='num'>53.7</td><td class='num'>43.6</td><td class='num'>42.4</td></tr><tr><td><a class='chart-link' href='charts/score_initial_claims.svg'>Initial claims</a></td><td class='num'>100.0</td><td class='num improved'>+13.5</td><td class='num'>99.8</td><td class='num'>97.8</td><td class='num'>98.4</td><td class='num'>92.6</td><td class='num'>89.5</td><td class='num'>89.0</td><td class='num'>94.9</td><td class='num'>91.2</td></tr></tbody><tfoot><tr><td><a class='chart-link' href='charts/jobs.svg' data-detail='charts/jobs_detail.svg' data-detail-label='Show its score items' data-detail-style='left: 69.2%; top: 32.1%'>Pillar score</a></td><td class='num'>76.7</td><td class='num improved'>+0.7</td><td class='num'>75.0</td><td class='num'>75.0</td><td class='num'>75.4</td><td class='num'>72.5</td><td class='num'>74.3</td><td class='num'>76.0</td><td class='num'>75.8</td><td class='num'>75.0</td></tr></tfoot></table>
+
+    
+
+    <section class="indicator-notes">
+      <h2>What each score item means</h2>
+      <ul><li id='score_unemployment_rate'><strong>Unemployment rate</strong>: 3-month average of the unemployment rate. <span class='transforms'>Curve: percentile over Jan 1990 to Dec 2025, lower better.</span> <span class='citations'>Series: <a href='https://fred.stlouisfed.org/series/UNRATE' title='FRED, Federal Reserve Bank of St. Louis'>UNRATE</a></span></li><li id='score_prime_age_employment'><strong>Prime-age employment rate</strong>: Employment-population ratio, ages 25-54. Added to cover participation, which the unemployment rate misses. <span class='transforms'>Curve: percentile over Jan 1990 to Dec 2025, higher better.</span> <span class='citations'>Series: <a href='https://fred.stlouisfed.org/series/LNS12300060' title='FRED, Federal Reserve Bank of St. Louis'>LNS12300060</a></span></li><li id='score_quits_rate'><strong>Quits rate</strong>: Cross-listed from business. Workers quit when they are confident of finding a better job. <span class='transforms'>Curve: percentile over Jan 1990 to Dec 2025, higher better.</span> <span class='citations'>Series: <a href='https://fred.stlouisfed.org/series/JTSQUR' title='FRED, Federal Reserve Bank of St. Louis'>JTSQUR</a></span></li><li id='score_initial_claims'><strong>Initial claims</strong>: 4-week average of initial claims divided by nonfarm payrolls, so the series is comparable as employment grows. <span class='transforms'>Curve: percentile over Jan 1990 to Dec 2025, lower better.</span> <span class='citations'>Series: <a href='https://fred.stlouisfed.org/series/IC4WSA' title='FRED, Federal Reserve Bank of St. Louis'>IC4WSA</a>, <a href='https://fred.stlouisfed.org/series/PAYEMS' title='FRED, Federal Reserve Bank of St. Louis'>PAYEMS</a></span></li></ul>
+    </section>
+  </main>
+  <!-- Shared modal window, inserted into every page with indicator tables (placeholder chart_dialog): an indicator's
+     chart, opened by clicking its name (links of class chart-link); charts.js wires the links.
+     Placeholder: root, the path from the page to the site's root ("" or "../").
+     A link with data-detail="<chart>" and data-detail-label="<text>" shows a checkbox labelled <text> that switches
+     the chart to <chart> and back, e.g. a pillar's score alone or with its score items; data-detail-style places it
+     over the chart, below its legend. -->
+<dialog id="chart-dialog" class="chart-dialog" aria-label="Indicator chart">
+  <form method="dialog"><button class="chart-dialog-close" aria-label="Close">&times;</button></form>
+  <div class="chart-frame">
+    <img alt="">
+    <label class="chart-detail" hidden><input type="checkbox"> <span></span></label>
+  </div>
+</dialog>
+<script src="../charts.js"></script>
+
+  <!-- Shared footer, inserted into every page. Placeholder: year -->
+<footer>
+  <p>
+    A personal, non-commercial project. &copy; 2026 Bernard Fraenkel.
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a>:
+    you may share and adapt this site's content with attribution, for non-commercial purposes only,
+    and adaptations must use the same license. Any business or commercial use requires written permission.
+    The license covers this site's own content (analysis, descriptions and presentation), not the underlying data.
+  </p>
+  <p>
+    Source data remain the property of their respective owners:
+    Federal Reserve Bank of St. Louis (FRED&reg;), U.S. Bureau of Labor Statistics,
+    U.S. Department of the Treasury (Fiscal Data), Yahoo Finance, YouGov and Ramp.
+    FRED&reg; is a registered trademark of the Federal Reserve Bank of St. Louis.
+    Third-party series are subject to their owners' copyrights and terms of use.
+  </p>
+  <p>For information only. This is not investment, financial or legal advice.</p>
+</footer>
+
+</body>
+</html>
